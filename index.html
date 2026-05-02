@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zaika Cafe — Authentic Indian cuisine with rich flavors. Order online, explore our menu, and share your experience.">
+    <title>Zaika Cafe — Authentic Indian Flavors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">Zaika<span class="logo-accent">Cafe</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="order-btn nav-order-btn" onclick="openCart()">
+                <span>🛒</span> Order <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======= HERO / HOME ======= -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle animate-on-scroll">Welcome to</p>
+            <h1 class="hero-title animate-on-scroll">Zaika Cafe</h1>
+            <p class="hero-tagline animate-on-scroll">Where Every Bite Tells a Story of Authentic Indian Flavors</p>
+            <div class="hero-buttons animate-on-scroll">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <button class="btn btn-secondary" onclick="openCart()">Order Online</button>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>+
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>+
+                    <span class="stat-label">Dishes</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Years of Service</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ======= MENU ======= -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Our Specialties</p>
+                <h2 class="section-title">Explore Our Menu</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="menu-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Main Course</button>
+                <button class="filter-btn" data-filter="breads">Breads</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= ABOUT US ======= -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="hero-banner.png" alt="Zaika Cafe Interior">
+                    <div class="about-badge">
+                        <span class="badge-number">5+</span>
+                        <span class="badge-text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <p class="section-subtitle">Our Story</p>
+                    <h2 class="section-title">About Zaika Cafe</h2>
+                    <div class="section-divider left"></div>
+                    <p class="about-text">
+                        Founded in 2021, <strong>Zaika Cafe</strong> was born from a passion for authentic Indian cuisine and a dream to bring the rich, diverse flavors of India to every table. Our name "Zaika" means <em>"taste"</em> in Hindi — and that's exactly what we deliver.
+                    </p>
+                    <p class="about-text">
+                        Every dish at Zaika is crafted with hand-ground spices, locally sourced ingredients, and generations-old family recipes. From the smoky tandoori flavors of the North to the aromatic curries of the South, our menu is a journey across India's culinary landscape.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🌿</span>
+                            <div>
+                                <h4>Fresh Ingredients</h4>
+                                <p>Locally sourced, daily fresh produce</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👨‍🍳</span>
+                            <div>
+                                <h4>Expert Chefs</h4>
+                                <p>Trained in authentic Indian cooking</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">❤️</span>
+                            <div>
+                                <h4>Made with Love</h4>
+                                <p>Family recipes passed down generations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= REVIEWS ======= -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Testimonials</p>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="reviews-carousel animate-on-scroll">
+                <button class="carousel-btn prev" id="prevReview" aria-label="Previous review">‹</button>
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Reviews injected by JS -->
+                </div>
+                <button class="carousel-btn next" id="nextReview" aria-label="Next review">›</button>
+            </div>
+
+            <div class="review-form-container animate-on-scroll">
+                <h3 class="form-title">Share Your Experience</h3>
+                <form class="review-form" id="reviewForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewerName">Your Name</label>
+                            <input type="text" id="reviewerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewRating">Rating</label>
+                            <div class="star-rating" id="starRating">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Your Review</label>
+                        <textarea id="reviewText" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Get in Touch</p>
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-card">
+                        <span class="contact-icon">📍</span>
+                        <h4>Visit Us</h4>
+                        <p>123 Spice Street, Food District<br>Mumbai, Maharashtra 400001</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">📞</span>
+                        <h4>Call Us</h4>
+                        <p>+91 98765 43210<br>+91 12345 67890</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">✉️</span>
+                        <h4>Email Us</h4>
+                        <p>hello@zaikacafe.com<br>orders@zaikacafe.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">🕐</span>
+                        <h4>Opening Hours</h4>
+                        <p>Mon–Sat: 10:00 AM – 11:00 PM<br>Sunday: 11:00 AM – 10:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Zaika<span class="logo-accent">Cafe</span></span>
+                    <p>Experience the authentic taste of India. Every dish crafted with love, served with warmth.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Popular Dishes</h4>
+                    <a href="#menu">Butter Chicken</a>
+                    <a href="#menu">Biryani</a>
+                    <a href="#menu">Paneer Tikka</a>
+                    <a href="#menu">Masala Dosa</a>
+                    <a href="#menu">Gulab Jamun</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for exclusive deals and new menu updates.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zaika Cafe. All rights reserved. Made with ❤️ for food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======= CART / ORDER SIDEBAR ======= -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Order</h3>
+            <button class="cart-close" onclick="closeCart()" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <span>🍽️</span>
+                <p>Your cart is empty</p>
+                <a href="#menu" onclick="closeCart()" class="btn btn-secondary">Browse Menu</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn btn-primary cart-checkout-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <!-- ======= TOAST NOTIFICATION ======= -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <!-- Chatbase Chatbot -->
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "rgYB7mfS1UFfr2gCWFbgT",
+        domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="rgYB7mfS1UFfr2gCWFbgT"
+        domain="www.chatbase.co"
+        defer>
+    </script>
+</body>
+</html>
+
